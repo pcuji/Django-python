@@ -1,0 +1,41 @@
+{% extends 'base_template.html' %}
+
+
+{% block content %}
+
+<!-- this is where the error message
+due to not voting will redirect -->
+
+{% if messages %}
+
+<div class="container">
+
+  <div class="row">
+    <ul class="messages">
+      {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+
+  <div class="container">
+    <h1> Pools detail page </h1>
+
+    {{ poll }}
+    <form class="" action="{% url 'estimator:vote' poll.id %}" method="post">
+    {% csrf_token %}
+    {% for choice in poll.choice_set.all %}
+      <input  type="radio"
+              name="choice"
+              id="choice {{ forloop.counter }}"
+              value="{{choice.id}}"/>
+      <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
+      <br>
+    {% endfor%}
+    <input type="submit" name="" value="Vote"/>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

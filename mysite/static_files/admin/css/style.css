@@ -1,0 +1,344 @@
+
+
+html body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+
+
+/********************
+**********************
+navbar
+**********************
+*********************/
+.navbar {
+  padding: .8rem;
+}
+
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%
+}
+.carousel-caption{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-caption h1{
+  font-size: 500%;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 15px #000;
+
+}
+
+.carousel-caption h3 {
+  font-size: 200%;
+  font-weight: 500;
+  text-shadow: 1px 1px 15px #000;
+  padding-bottom: 1rem;
+}
+
+.btn-primary {
+  background-color: #6648b1;
+  border: 1px solid #6648b1;
+}
+
+.btn-primary:hover {
+  background-color: #563d7c;
+  border: 1px solid #563d7c;
+}
+
+
+.jumbotron {
+  padding: 1rem;
+  border-radius: 0;
+}
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+.welcome {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
+
+}
+
+.welcome hr {
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+}
+.fa-python {
+  color: #2163af;
+}
+.fa-code {
+  color: #e54d26;
+}
+
+.fa-css3{
+  color: #2163af;
+}
+.fa-python, .fa-code, .fa-css3 {
+  font-size: 4em;
+  margin: 1rem;
+}
+
+.fun {
+  width: 100%;
+  margin-bottom: 2rem;
+
+}
+.gif {
+  max-width: 100%;
+
+}
+
+.social a{
+  font-size: 4.5em;
+  padding: 3rem;
+}
+
+.fa-facebook {
+  color: #3b5998;
+
+}
+.fa-github {
+  color: #333;
+}
+.fa-linkedin {
+  color: #0077B5;
+}
+.fa-pinterest {
+  color: #E60023;
+}
+.fa-instagram{
+  color: #8a3ab9;
+}
+.fa-facebook:hover,
+.fa-github:hover,
+.fa-linkedin:hover,
+.fa-pinterest:hover,
+.fa-instagram:hover {
+  color: #d5d5d5;
+}
+
+footer {
+  background-color: #3f3f3f;
+  color: #d5d5d5;
+  padding-top: 2rem;
+}
+
+hr.light{
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+  /* color: white; */
+}
+footer a{
+  color: #d5d5d5;
+}
+
+hr.light-100 {
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+header .branding {
+  background: #ffffff;
+  color: #1E4CC7;
+  float: left;
+  margin: 0;
+  padding: 0;
+
+}
+
+/********************
+**********************
+media queries
+**********************
+*********************/
+@media (max-width:992px){
+    .social a{
+      font-size: 4em;
+      padding: 2rem;
+    }
+}
+@media (max-width:768px){
+  .carousel-caption{
+    top: 45%;
+  }
+  .carousel-caption h1{
+    font-size: 350%;
+  }
+
+  .carousel-caption h3 {
+    font-size: 140%;
+  }
+  .carousel-caption .btn {
+    font-size: 95%;
+    padding: 8px 14px;
+  }
+  .display-4{
+    font-size: 200%;
+  }
+  .social a{
+    font-size: 2.5em;
+    padding: 1.2rem;
+  }
+}
+@media (max-width:576px){
+  .carousel-caption{
+    top: 40%;
+  }
+  .carousel-caption h1{
+    font-size: 250%;
+  }
+
+  .carousel-caption h3 {
+    font-size: 110%;
+
+  }
+  .carousel-caption .btn {
+    font-size: 90%;
+    padding: 4px 8px;
+  }
+  .carousel-indicators {
+    display: none;
+  }
+  .display-4{
+    font-size: 160%;
+  }
+  .social a{
+    font-size: 2em;
+    padding: .7rem;
+  }
+}
+/********************
+**********************
+General 2 style decoration
+**********************
+*********************/
+
+
+
+
+/********************
+**********************
+General 2 style decoration
+**********************
+*********************/
+#message, #web-development,  #cloud-migration, #contractor{
+  background: #e6faff;
+  
+}
+
+
+/********************
+**********************
+showcase
+**********************
+*********************/
+
+
+
+
+/********************
+**********************
+message
+**********************
+*********************/
+
+
+
+
+/****************
+******************
+footer
+*******************
+*/
+
+
+
+
+
+
+/****************
+******************
+here is wher the styling of the article pages start
+*******************
+*/
+
+
+
+
+/********************
+**********************
+base_navigation
+**********************
+*********************/
+#base-navigation {
+    background-image: url(galaxy.jpg);
+    /* background-image: url(ai.jpg); */
+    /* background: #e6faff; */
+    /* background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; */
+    color: #ffffff;
+    background-size: cover;
+
+}
+
+#base-navigation2 {
+    background-image: url(city2.jpg);
+    /* background-image: #E6FAFF; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #ffffff;
+    background-size: cover;
+
+
+}
+
+
+
+
+
+/********************
+**********************
+services.html
+**********************
+*********************/
+
+
+/********************
+**********************
+packages.html
+**********************
+*********************/
+.grid-container {
+  margin-top: 3em;
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  color: #1E4CC7;
+}

@@ -1,0 +1,40 @@
+{% extends 'base_navigation.html' %}
+{% load static  %}
+
+{% block custom_css %}
+
+
+<!-- <link href=" {% static 'admin/css/style.css' %}" rel="stylesheet" > -->
+
+
+<!-- here neet to be the path to the custom css  -->
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="container-fluid">
+    <div class="main-title">
+        <h1 class="text-center">SERVICES</h1>
+    </div>
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+        <p>Web application support varies depending on the complexity of the application, which can include but is not limited to the following: </p>
+        <h3 class="text-center">Low complexity:</h3>
+        <p>
+          This web application customization provides standard essential functionality.
+        </p>
+        <h3 class="text-center">Medium complexity</h3>
+        <p>
+          This application consists of components that best fit your business needs, but requires a larger amount of data processing.
+        </p>
+        <h3 class="text-center">High complexity</h3>
+        <p> Specialized components that may require computer architecture or creation of hard code components.
+          This type of application is capable of handling 500K+ users.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+{% endblock %}

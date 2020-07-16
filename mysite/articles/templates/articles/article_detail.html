@@ -1,0 +1,27 @@
+{% extends 'base_template.html' %}
+
+{%  block content %}
+  <div class="cointainer-fluid padding">
+    <h1 class="text-center"> <a href="{% url 'articles:list' %}"> <img src="/static/admin/img/logo.png" alt=""></a> </h1>
+
+  <!-- <img src="/static/admin/img/logo.png" alt=""> -->
+  <div class="list-group">
+    <div class="list-group-item list-group-item-action">
+      <div class="col-sm-8 offset-sm-2">
+        <img src="{{article.thumb.url}}" class="img-fluid" />
+      </div>
+      <h2 class="text-center">{{article.title}}</h2>
+      <div class="col-sm-8 offset-sm-2">
+        <p class="lead"> here will be a leading paragraph</p>
+        <p>{{article.body}}</p>
+        <p>{{article.date}}</p>
+      </div>
+
+
+    </div>
+
+  </div>
+  </div>
+
+
+{% endblock %}

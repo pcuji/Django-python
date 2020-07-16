@@ -1,0 +1,60 @@
+{% extends 'base_template.html' %}
+{% load static  %}
+
+
+{% block extra_head %}
+<link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous">
+{% endblock %}
+{% block custom_css %}
+  <link href=" {% static 'admin/css/custom.css' %}" rel="stylesheet" >
+{% endblock %}
+    {% block content %}
+        <div class="container">
+          <h1 class='text-center'>Welcome to Poll List!</h1>
+            <div class="row">
+              <div class="col-sm-8 offset-sm-2">
+                <button  class="btn btn-primary ">Add <i class="fas fa-plus"></i></button>
+              <div class="list-group">
+                    {% for poll in polls %}
+                        <a  href="{% url 'estimator:detail' poll.id %}"
+                            class="list-group-item list-group-item-action">
+                            {{ poll }}
+                        </a>
+                          <!-- <ul>
+                            {% for choice in poll.choice_set.all %}
+                            <li>
+                              {{ choice.choice_text }}
+                            </li>
+                            {% endfor %}
+                          </ul> -->
+                    {% endfor %}
+                  </div>
+
+                  <div class="pagination">
+                    <span class="step-links">
+                        {% if polls.has_previous %}
+                            <a href="?page=1&{{params}}">&laquo; first</a>
+                            <a href="?page={{ polls.previous_page_number }}&{{params}}">previous</a>
+                        {% endif %}
+
+                        <span class="current">
+                            Page {{ polls.number }} of {{ polls.paginator.num_pages }}.
+                        </span>
+
+                        {% if polls.has_next %}
+                            <a href="?page={{ polls.next_page_number }}&{{params}}">next</a>
+                            <a href="?page={{ polls.paginator.num_pages }}&{{params}}">last &raquo;</a>
+                        {% endif %}
+                    </span>
+                </div>
+
+
+
+              </div>
+            </div>
+
+        </div>
+    {% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base_template.html' %}
+
+
+{% block content %}
+<div class="container-fluid">
+
+  <h2 class='text-center'>Article List</h2>
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+
+        {%  for article in articles %}
+          <div class="list-group">
+            <div class="list-group-item list-group-item-action">
+              <h2> <a href="{% url 'articles:detail' slug=article.slug %}">{{article.title}} </a></h2>
+
+              <p>{{ article.body }}</p>
+              <p>{{ article.date }}</p>
+            </div>
+          </div>
+        {% endfor %}
+
+        <div class="pagination">
+          <span class="step-links">
+              {% if articles.has_previous %}
+                  <a href="?page=1&{{params}}">&laquo; first</a>
+                  <a href="?page={{ articles.previous_page_number }}&{{params}}">previous</a>
+              {% endif %}
+
+              <span class="current">
+                  Page {{ articles.number }} of {{ articles.paginator.num_pages }}.
+              </span>
+
+              {% if articles.has_next %}
+                  <a href="?page={{ articles.next_page_number }}&{{params}}">next</a>
+                  <a href="?page={{ articles.paginator.num_pages }}&{{params}}">last &raquo;</a>
+              {% endif %}
+          </span>
+      </div>
+
+
+      </div>
+    </div>
+
+</div>
+
+{% endblock %}
